@@ -31,7 +31,7 @@ $Losses = filter_input(INPUT_POST,'Losses');
         values ('$Name','$DOB','$MobileNo','$gender','$email','$AadharNumber','$BarEnrollmentNumber','$Field','$OfficeAddress','$Experience','$Wins','$Losses')";
         if($conn->query($sql))
         {
-          header("Location: table.html");
+          header("Location: login.html");
         }
         else {
           echo "Error:".$sql."<br>".$conn->error;

@@ -5,22 +5,22 @@ if(!empty($username)){
   if(!empty($password))
   {
     $host="localhost";
-    $dbusername="root"
-    $dbpassword=""
+    $dbusername="root";
     $dbname="glitchmob";
+    $dbpassword="";
     $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
     if (mysqli_connect_error())
     {
-      die('Connect Error('.mysqli_connect_errno().')'.mysqli.mysqli_connect_error
-
+      die('Connect Error('.mysqli_connect_errno().')'.mysqli.mysqli_connect_error());
     }
     else
     {
-     $sql="INSERT INTO client (username,password)
+     $sql="INSERT INTO loginlawyer (username,password)
      values ('$username','$password')";
      if($conn->query($sql))
      {
-       echo "New record added";
+       header("Location: table.html");
+   exit;
      }
      else {
        echo "Error:".$sql."<br>".$conn->error;;

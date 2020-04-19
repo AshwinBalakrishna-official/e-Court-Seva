@@ -21,7 +21,7 @@ $typ = filter_input(INPUT_POST,'typ');
         values ('$Fir','$Casedesc','$typ')";
         if($conn->query($sql))
         {
-          echo "New record added";
+          header("Location:client-advo.html");
         }
         else {
           echo "Error:".$sql."<br>".$conn->error;

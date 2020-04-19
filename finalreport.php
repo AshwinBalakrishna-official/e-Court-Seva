@@ -28,7 +28,7 @@ if(mysqli_connect_error())
 
       if($conn->query($sql))
       {
-        header("Location: REPOSITORY.html");
+        header("Location: invoice.html");
       }
       else {
         echo "Error:".$sql."<br>".$conn->error;
